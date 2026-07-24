@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ZeniPower</string>
+    <string name="btn_init">Calcular</string>
+</resources>
