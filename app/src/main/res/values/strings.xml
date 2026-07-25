@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">ZeniPower</string>
-    <string name="btn_init">Calcular</string>
+    <string name="btn_init">Entrar</string>
     <string name="edt_bat">Informe a capacidade da bateria kWh:</string>
     <string name="edt_percent">Informe o % de carga a carregar:</string>
     <string name="cost_kwh">Valor kWh:</string>
     <string name="effi_charger">Eficiência carregador:</string>
+    <string name="btn_calc">Calcular</string>
+
 </resources>

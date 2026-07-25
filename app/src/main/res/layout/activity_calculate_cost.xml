@@ -34,9 +34,10 @@
             android:layout_height="wrap_content"
             android:hint="@string/edt_bat"
             android:inputType="numberDecimal"
-            android:maxLength="4"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:background="@drawable/gradient_bg"
+            android:maxLength="2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,9 +57,10 @@
             android:layout_height="wrap_content"
             android:hint="@string/edt_percent"
             android:inputType="numberDecimal"
-            android:maxLength="4"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:maxLength="2"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient_bg"
+            android:textColorHint="@color/white"
             android:textSize="16sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,13 +79,15 @@
             android:layout_height="wrap_content"
             android:hint="@string/cost_kwh"
             android:inputType="numberDecimal"
-            android:maxLength="4"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:background="@drawable/gradient_bg"
+            android:maxLength="2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:textSize="16sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
@@ -96,13 +100,38 @@
             android:id="@+id/edt_effi_charger"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/gradient_bg"
             android:hint="@string/effi_charger"
             android:inputType="numberDecimal"
-            android:maxLength="4"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="16sp"/>
+            android:maxLength="2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_calc"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_calc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/txtView_result"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:textColor="@color/orange_init"
+        tools:text="Custo final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calc" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
