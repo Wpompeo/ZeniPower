@@ -1,6 +1,7 @@
 package com.wts.zenipower
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -31,6 +32,8 @@ class CalculateCost : AppCompatActivity() {
         val editEffi = findViewById<TextInputEditText>(R.id.edt_effi_charger)
         val txtResult = findViewById<TextView>(R.id.txtView_result)
         val btnCalculate = findViewById<Button>(R.id.btn_calc)
+        val btnRestore = findViewById<Button>(R.id.btnReset)
+        val btnFinish = findViewById<Button>(R.id.btnFinish)
 
         btnCalculate.setOnClickListener {
 
@@ -50,17 +53,37 @@ class CalculateCost : AppCompatActivity() {
             } else {
                 val editBatFloat = editBatStr.toFloat()
                 val editPercentFloat = editPercentStr.toFloat()
-                val editKwhFloat = editPercentStr.toFloat()
+                val editKwhFloat = editKwhStr.toFloat()
                 val editEffiFloat = editEffiStr.toFloat()
 
                 //final calculation
-                val costCharger = ((editBatFloat/editEffiFloat) * (editPercentFloat) * (editKwhFloat) / 100)
-                val valorFormatado = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
+                val costCharger =
+                    ((editBatFloat / editEffiFloat) * (editPercentFloat / 100)) * (editKwhFloat)
+                val formatValue = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
                     .format(costCharger)
-                txtResult.text = "Total a pagar: $valorFormatado"
+                txtResult.text = "Total a pagar: $formatValue"
             }
-        }
 
+        }
+        //reset app
+        btnRestore.setOnClickListener {
+            val intent = Intent(this, CalculateCost::class.java)
+            startActivity(intent)
+            txtResult.text = ""
+            Snackbar.make(btnRestore, "Clear dados...", Snackbar.LENGTH_LONG).show()
+            btnRestore.postDelayed({
+                finishAffinity()
+            },200)
+
+        }
+        //finish app
+        btnFinish.setOnClickListener {
+            Snackbar.make(btnFinish, "Finalizando App...", Snackbar.LENGTH_LONG).show()
+            btnFinish.postDelayed({
+                finishAffinity()
+            }, 300)
+
+        }
 
     }
 }

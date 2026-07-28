@@ -6,5 +6,7 @@
     <string name="cost_kwh">Valor kWh:</string>
     <string name="effi_charger">Eficiência carregador:</string>
     <string name="btn_calc">Calcular</string>
+    <string name="btn_reset">limpar</string>
+    <string name="btn_finish">finalizar</string>
 
 </resources>
