@@ -1,9 +1,9 @@
 # ZeniPower
 
-É um aplicativo desenvolvido que calcula o custo de uma recarga de bateria. Desenvolvido em 100% kotlin nativo, sua principal funcão é auxiliar os usuários na hora de realização de uma recarga. Conforme os campos são alimentados, você consegue saber o custo real a pagar no final da recarga.
-* Tela inicial.
-* Tela dados técnicos.
-* Botões: Calcular, limpar e finalizar.
+This is an app designed to calculate the cost of a battery charge. Developed using 100% native Kotlin, its primary function is to assist users when charging. As you enter data into the fields, you can see the actual cost to be paid once charging is complete.
+* Home screen.
+* Technical data screen.
+* Buttons: Calculate, Clear, and Finish.
 
 
 ## :camera_flash: Screenshots
@@ -19,7 +19,7 @@
 
 
 
-## 🖥️ Tecnologias
+## 🖥️ Technologies
 - Activity
   - LinearLayout
   - ConstraintLayout
